@@ -1,0 +1,14 @@
+name: service-broker-proxy-k8s
+version: 0.0.1
+id: 8b2baf30-d804-43e3-89bc-d2794364617c
+description: "Service Broker Proxy K8S for Service Manager"
+displayName: "Broker Proxy K8S"
+
+tags: poc
+labels:
+  showcase: "true"
+providerDisplayName: SAP
+longDescription: ""
+bindable: false
+planUpdatable: true
+provisionOnlyOnce: true

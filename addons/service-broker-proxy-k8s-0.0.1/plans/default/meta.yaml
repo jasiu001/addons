@@ -1,0 +1,4 @@
+name: default
+id: 0bcc7ec0-8cbd-4353-b9ae-419bc2df846c
+description: "The default plan for Broker Proxy K8S"
+displayName: Default

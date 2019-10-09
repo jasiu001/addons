@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "secretName": {
+      "type": "string",
+      "title": "ServiceManager Secret Name",
+      "description": "Secret name with user and password to ServiceManager"
+    },
+    "config": {
+      "type": "object",
+      "title": " ",
+      "properties": {
+        "sm": {
+          "type": "object",
+          "title": " ",
+          "properties": {
+            "url": {
+              "type": "string",
+              "title": "Url",
+              "description": "ServiceManager path"
+            }
+          },
+          "required": ["url"]
+        }
+      }
+    }
+  },
+  "required": ["secretName"]
+}
