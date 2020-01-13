@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "generic-connector.fullname" . }}-a
+  labels:
+    app: {{ template "generic-connector.fullname" . }}
+    component: {{ template "generic-connector.fullname" . }}
+data:
+  SYSTEM_URL	: {{ .Values.system_url | quote }}
+  APPLICATION_NAME: {{ .Values.application_name | quote }}
+  PROVIDER_NAME: {{ .Values.provider_name | quote }}
+  PRODUCT_NAME: {{ .Values.product_name | quote }}
+  APP_KIND: rest-with-apikey
+  #API_DESCRIPTION: {{ printf "%s %s" .Values.product_name "API"  }}
+  API_SPECIFICATION_URL: {{ .Values.spec_url | default "" | quote  }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "generic-connector.fullname" . }}-b
+  labels:
+    app: {{ template "generic-connector.fullname" . }}
+    component: {{ template "generic-connector.fullname" . }}
+data:
+  headers.json: |-
+    {{ .Values.api_call_headers }}
+  params.json: |-
+    {{ .Values.api_call_params }}

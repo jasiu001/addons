@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "system_url": {
+      "type": "string",
+      "title": "System URL",
+      "description": "The base URL of the External System API. For example, https://api.github.com"
+    },
+    "api_call_headers": {
+      "type": "string",
+      "title": "API Call Headers",
+      "description": "Pass all the headers required to make API calls as a JSON object. e.g. {\"api-key\" : \"<API Key value>\"}",
+      "format": "password"
+    },
+    "api_call_params": {
+      "type": "string",
+      "title": "API Call Params",
+      "description": "Pass all the headers required to make API calls as a JSON object. e.g. {\"format\" : \"client_credentials\"}",
+      "format": "password"
+    },
+    "application_name": {
+      "type": "string",
+      "title": "Application Name",
+      "description": "The name of the Application CR where the REST APIS should be registered for consumption"
+    },
+    "spec_url": {
+      "type": "string",
+      "title": "API Specification URL",
+      "description": "API Specification URL"
+    },
+    "provider_name": {
+      "type": "string",
+      "title": "Provider Name",
+      "description": "Provider Name"
+    },
+    "product_name": {
+      "type": "string",
+      "title": "Product Name",
+      "description": "Product Name"
+    }
+  },
+  "required": [
+    "system_url",
+    "api_call_headers",
+    "api_call_params",
+    "application_name",
+    "provider_name",
+    "product_name"
+  ]
+}
