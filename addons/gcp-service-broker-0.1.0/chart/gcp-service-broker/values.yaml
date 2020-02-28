@@ -14,6 +14,7 @@
 ---
 replicaCount: 1
 
+secretName: undefined
 
 # Both the image and doc base path are gathered from
 # this commit: https://github.com/GoogleCloudPlatform/gcp-service-broker/commit/6f3136488f84b6f416ba4a1cc4da6a535bf07185
